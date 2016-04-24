@@ -1,31 +1,37 @@
-# Dependencies
-markdown:            redcarpet
-highlighter:         pygments
-
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
-
 # Setup
-title:            Codinfox
-tagline:          'Learning to be Giant.'
-description:      'Blog of YourName. Here are some technical stuff. Some notes about development.'
-url:              http://codinfox.github.io
+title:               'Viet on Rails'
+tagline:             'Ruby và nhiều thứ thú vị khác'
+description:         'Cộng đồng những lập trình viên sử dụng Ruby và muốn trao đổi về nhiều thứ thú vị khác.'
+url:                 http://vietonrails.com
 
+# About/contact
 author:
-  name:           'Your Name'
-  url:            http://codinfox.github.io
-  gravatar:       https://en.gravatar.com/yourname
-  photo:          http://2.gravatar.com/avatar/00000000000000000000000000000000?size=350
-  introduction:   'Some introduction words that will be displayed under the avatar. You may include HTML <a href="#">here</a>.'
+  name:              Luu Tuan Anh
+  email:             rock.khuya@gmail.com
 
-paginate:         5
-paginate_path:    '/blog/page:num'
+# Outputting
+permalink: /:categories/:year/:month/:day/:title
 
-# Custom vars
-version:          1.0.0
+# Markdown setting
+kramdown:
+  input: GFM
 
-github:
-  repo:           https://github.com/codinfox/lanyon-codinfox.github.io
+# jekyll-tagging
+tag_page_layout:     tag_page
+tag_page_dir:        tag
+
+gems:                [jekyll-paginate, jekyll-watch]
+
+# jekyll-paginate
+paginate:            5
+paginate_path:       '/page:num'
+
+# author:
+#   name:           'Your Name'
+#   url:            http://codinfox.github.io
+#   gravatar:       https://en.gravatar.com/yourname
+#   photo:          http://2.gravatar.com/avatar/00000000000000000000000000000000?size=350
+#   introduction:   'Some introduction words that will be displayed under the avatar. You may include HTML <a href="#">here</a>.'
+
+# github:
+#   repo:           https://github.com/codinfox/lanyon-codinfox.github.io

@@ -7,7 +7,9 @@ layout: default
   <span>
     <span class="post-date" style="display:inline-block;">{{ page.date | date_to_string }}</span> |
     {% for tag in page.tags %}
-      <span class="codinfox-tag-mark">{{ tag }}</span>
+      <a href="/tag#{{tag}}">
+        <span class="codinfox-tag-mark">{{ tag }}</span>
+      </a>
     {% endfor %}
   </span>
 

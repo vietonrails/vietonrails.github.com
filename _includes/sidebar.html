@@ -5,15 +5,13 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <a href="{{ site.author.gravatar }}" title="View on Gravatar" class="codinfox-profile-photo">
-      <img src="{{ site.author.photo }}" alt="Gravatar"/>
-    </a>
     <p>{{ site.author.introduction }}</p>
   </div>
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
-    <a class="sidebar-nav-item{% if page.title == "Blog" %} active{% endif %}" href="/blog">Blog</a>
+    <a class="sidebar-nav-item{% if page.title == "Category" %} active{% endif %}" href="/category">Category</a>
+    <a class="sidebar-nav-item{% if page.title == "Tag" %} active{% endif %}" href="/tag">Tags</a>
 
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -29,15 +27,8 @@
       {% endif %}
     {% endfor %}
 
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">Fork me on Github</a>
-<!--     <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
   </nav>
 
-  <div class="sidebar-item">
-    <p>
-      &copy; {{ site.time | date: '%Y' }} Codinfox. This work is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
-    </p>
-  </div>
   <div class="sidebar-item">
     <p>
       Powered by <a href="http://jekyllrb.com">jekyll</a> and <a href="http://lanyon.getpoole.com">lanyon</a>.
