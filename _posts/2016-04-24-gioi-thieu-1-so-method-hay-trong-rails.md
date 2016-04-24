@@ -3,7 +3,7 @@ layout: post
 title: "Giới thiệu 1 số method hay trong Rails"
 description: ""
 category: Rails
-tags: []
+tags: [try method, blank method, present method, presence method, pluck]
 ---
 
 # sử dụng Object#try(:method_name) thay vì kiểm tra nil 
