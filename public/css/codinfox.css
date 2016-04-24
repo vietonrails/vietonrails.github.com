@@ -150,7 +150,7 @@ border-top: 1px solid #eee;
 }
 
 html {
-    font-family: Avenir, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 200;
     background:#fff;
     -webkit-text-size-adjust:100%;
@@ -161,23 +161,23 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family:'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight:400;
 }
 
 code,
 pre {
-    font-family:Courier, 'Courier New', monospace;
+    font-family: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 blockquote {
     font-weight:300;
-    font-family:Avenir, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 @media (min-width: 38rem) {
     .post h2, .post h3, .post h4, .post h5, .post h6 {
-        margin-left: -1rem;
+        /*margin-left: -1rem;*/
         margin-bottom: .5rem;
     }
 }
