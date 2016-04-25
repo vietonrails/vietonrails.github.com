@@ -5,12 +5,10 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span>
-    <span class="post-date" style="display:inline-block;">{{ page.date | date_to_string }}</span>
-    <h3>
-      {% for tag in page.tags %}
-        <a class="codinfox-tag-mark" href="/tag/#{{ tag | slugify }}">{{ tag }}</a>
-      {% endfor %}
-    </h3>
+    <span class="post-date" style="display:inline-block;">{{ page.date | date_to_string }}</span> |
+    {% for tag in page.tags %}
+      <a class="codinfox-tag-mark" href="/tag#{{ tag | slugify }}">{{ tag }}</a>
+    {% endfor %}
   </span>
 
   {{ content }}
