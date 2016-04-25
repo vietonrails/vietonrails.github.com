@@ -13,6 +13,8 @@ Khi gặp vấn đề này, cells sẽ phát huy tối đa sức mạnh của m�
 
 cells là 1 gem được sử dụng để gộp cả view lẫn controller lại thành 1 package, với những view có logic phức tạp, thì cells sẽ giúp code trở nên dễ đọc và dễ dàng tái sử dụng hơn. 
 
+<!-- more -->
+
 # những trường hợp dùng cells
 
 * hiển thị popup login
