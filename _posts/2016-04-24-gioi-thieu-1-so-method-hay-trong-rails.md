@@ -6,7 +6,10 @@ category: Rails
 tags: [try method, blank method, present method, presence method, pluck]
 ---
 
+Bài viết này giới thiệu về các method hay và tiện dụng trong ruby và rails như `try`, `blank?`, `present?`, pluck, ...
+
 # sử dụng Object#try(:method_name) thay vì kiểm tra nil 
+
 ```ruby
 if parent.children && parent.children.singleton?
   singleton = parent.children.first
@@ -22,6 +25,7 @@ if parent.children.try(:singleton?)
   send_mail_to(singleton)
 end
 ```
+<!-- more -->
 
 # sử dụng blank?/present?
 
