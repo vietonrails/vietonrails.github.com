@@ -46,6 +46,4 @@ rake preview
 # Các tasks còn lại
 1. Table of contents
 2. Chuyển bài viết từ wordpress về jekyll
-3. Google analytics
-4.
 

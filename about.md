@@ -4,23 +4,42 @@ title: About
 ---
 
 <p class="message">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Sau nhiều comment là tại sao site về Ruby lại sử dụng Wordpress :D, mình đã build lại Việt on Rails bằng jekyll, hàng Ruby 100% nhé.
+  Đùa chút chứ 1 phần là do credit card của mình có vấn đề, nên không thanh toán được cho bên host :D. Nhân tiện việc chuyển host nên quyết định dùng Github Pages, vừa miễn phí, vừa nhanh, lại theo xu thế của thời đại, hehe.
 </p>
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Việt on Rails là cộng đồng những người sử dụng Ruby, Rails và thích trao đổi thêm về nhiều vấn đề khác. Những điều này sẽ giúp từng thành viên chia sẻ và nâng cao trình độ của bản thân :).
 
+Việt on Rails là phi lợi nhuận, tạo ra vì cộng đồng và do cộng đồng để tồn tại.
 
-<blockquote>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-</blockquote>
+# Đóng góp bài viết
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Các bước để có thể viết bài cho Việt on Rails.
 
-## The standard Lorem Ipsum passage, used since the 1500s
+1. clone repo https://github.com/vietonrails/vietonrails.github.com
+2. `bundle install` để cài các gems cần thiết
+3. Mình đã viết (copy và chỉnh sửa)  thêm 1 số task rake liên quan để thao tác tiện hơn.
+4. Tạo bài viết mới rồi gửi pull request
+5. Ăn chơi nhảy múa :D
 
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+Create new post :
 
-## Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+```
+rake post title="Awesome title" [date="2012-02-09"] [tags=[tag1,tag2]] [category="category"]
+```
 
+Create new page:
 
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+```
+rake page title="Awesome title"
+```
+
+Preview trên local:
+
+```
+rake preview
+```
+
+Cụ thể và đầy đủ hơn các bạn có thể tham khảo trong README của repo :).
+
+Thân ái và quyết thắng :D.

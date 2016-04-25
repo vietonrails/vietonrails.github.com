@@ -1,7 +1,7 @@
 # Setup
 title:               'Viet on Rails'
 tagline:             'Ruby và nhiều thứ thú vị khác'
-description:         'Cộng đồng những lập trình viên sử dụng Ruby và muốn trao đổi về nhiều thứ thú vị khác.'
+description:         'Cộng đồng những lập trình viên sử dụng Ruby, Rails và muốn trao đổi về nhiều thứ thú vị khác.'
 url:                 http://vietonrails.com
 
 # About/contact
@@ -29,13 +29,3 @@ gems:                [jekyll-paginate, jekyll-watch]
 # jekyll-paginate
 paginate:            5
 paginate_path:       '/page:num'
-
-# author:
-#   name:           'Your Name'
-#   url:            http://codinfox.github.io
-#   gravatar:       https://en.gravatar.com/yourname
-#   photo:          http://2.gravatar.com/avatar/00000000000000000000000000000000?size=350
-#   introduction:   'Some introduction words that will be displayed under the avatar. You may include HTML <a href="#">here</a>.'
-
-# github:
-#   repo:           https://github.com/codinfox/lanyon-codinfox.github.io
