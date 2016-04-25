@@ -4,6 +4,7 @@ title: "Cách sử dụng cells để tối ưu code"
 description: ""
 category: Rails
 tags: [ cells, tối ưu code ]
+comments: true
 ---
 # cells là gì
 
