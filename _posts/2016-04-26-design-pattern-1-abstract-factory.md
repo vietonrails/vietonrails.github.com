@@ -32,6 +32,8 @@ Abstract Factory là pattern có nhiệm vụ tạo ra các object và đảm b�
 
 Tiếp theo ta sẽ viết code để thoả mãn điều kiện trên. 
 
+<!-- more -->
+
 Class Duck và Frog sẽ như sau:
 
 ```ruby
