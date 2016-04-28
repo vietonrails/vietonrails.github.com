@@ -28,38 +28,6 @@
     </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-    <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
-        }, false);
-      })(document);
-    </script>
-  <script>
-    (function(){
-        document.addEventListener('DOMContentLoaded', function(){
-            var children = document.getElementsByClassName('codinfox-changing-keywords')[0].children;
-            var length = children.length;
-            var idx = 0;
-            setInterval(function(){
-                children[idx].className = "hidden";
-                idx = (idx + 1) % length;
-                children[idx].className = "visible";
-            }, 2000);
-        });
-    })();
-  </script>
-
+    {% include script.html %}
   </body>
 </html>

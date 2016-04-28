@@ -1,0 +1,41 @@
+<script>
+  (function(document) {
+    var toggle = document.querySelector('.sidebar-toggle');
+    var sidebar = document.querySelector('#sidebar');
+    var checkbox = document.querySelector('#sidebar-checkbox');
+
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+
+      if(!checkbox.checked ||
+         sidebar.contains(target) ||
+         (target === checkbox || target === toggle)) return;
+
+      checkbox.checked = false;
+    }, false);
+  })(document);
+</script>
+
+<script>
+  (function(){
+      document.addEventListener('DOMContentLoaded', function(){
+          var children = document.getElementsByClassName('codinfox-changing-keywords')[0].children;
+          var length = children.length;
+          var idx = 0;
+          setInterval(function(){
+              children[idx].className = "hidden";
+              idx = (idx + 1) % length;
+              children[idx].className = "visible";
+          }, 2000);
+      });
+  })();
+</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=378347882330927";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
