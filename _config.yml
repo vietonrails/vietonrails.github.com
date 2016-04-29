@@ -24,7 +24,7 @@ incremental: false
 tag_page_layout:     tag_page
 tag_page_dir:        tag
 
-gems:                [jekyll-paginate, jekyll-watch]
+gems:                [jekyll-paginate, jekyll-watch, jekyll-sitemap]
 
 # jekyll-paginate
 paginate:            5
