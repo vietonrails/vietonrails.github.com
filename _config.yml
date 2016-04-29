@@ -1,6 +1,6 @@
 # Setup
 title:               'Viet on Rails'
-tagline:             'Ruby và nhiều thứ thú vị khác'
+tagline:             'Ruby, Rails và nhiều thứ thú vị khác'
 description:         'Cộng đồng những lập trình viên sử dụng Ruby, Rails và muốn trao đổi về nhiều thứ thú vị khác.'
 url:                 http://vietonrails.com
 
@@ -24,7 +24,7 @@ incremental: false
 tag_page_layout:     tag_page
 tag_page_dir:        tag
 
-gems:                [jekyll-paginate, jekyll-watch]
+gems:                [jekyll-paginate, jekyll-watch, jekyll-sitemap]
 
 # jekyll-paginate
 paginate:            5
