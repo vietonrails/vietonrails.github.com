@@ -15,7 +15,7 @@ Bài viết này sẽ phân tích cách làm của 15 services lớn trên thế
 
 <!-- more -->
 
-# Các services được phân tích
+## Các services được phân tích
 Các web API dưới đây là những trang web rất phổ biến đối với các lập trình viên.
 Việc sắp xếp thứ tự là ngẫu nhiên.
 
@@ -35,7 +35,7 @@ Việc sắp xếp thứ tự là ngẫu nhiên.
 14. Philips Hue
 15. Qiita
 
-## Github
+### Github
 
 [Github Developer](https://developer.github.com/v3/#client-errors)
 
@@ -60,7 +60,7 @@ Việc sắp xếp thứ tự là ngẫu nhiên.
 
 Những lỗi cơ bản thì chỉ cần `message` là đủ.  Trong trường hợp cần phải trả về nhiều lỗi thì cách viết bằng `errors` này cũng có thể đáp ứng được.
 
-## Facebook
+### Facebook
 
 [Using the Graph API](https://developers.facebook.com/docs/graph-api/using-graph-api/v2.3#errors)
 
@@ -86,7 +86,7 @@ Những lỗi cơ bản thì chỉ cần `message` là đủ.  Trong trường h
 
 Đặc trưng của Facebook là errors hướng tới người sử dụng. Vì thế mà đã được dịch, được xử lý trên server. Đối với người viết app thì cách làm này sẽ giúp công việc đơn giản hơn rất nhiều.
 
-## Heroku
+### Heroku
 
 [Platform API Reference | Heroku Dev Center](https://devcenter.heroku.com/articles/platform-api-reference#errors)
 
@@ -104,7 +104,7 @@ Những lỗi cơ bản thì chỉ cần `message` là đủ.  Trong trường h
 
 Cách trả lại errors của Heroku cực kì đơn giản.
 
-## Toggl
+### Toggl
 
 [toggl_api_docs/reports.md at master · toggl/toggl_api_docs](https://github.com/toggl/toggl_api_docs/blob/master/reports.md#failed-requests)
 
@@ -124,7 +124,7 @@ Cách trả lại errors của Heroku cực kì đơn giản.
 
 Đặc trưng của toggl là trong errors có cả các tip, các hướng dẫn để xử lý lỗi.
 
-## Yahoo!
+### Yahoo!
 
 ```json
 {
@@ -138,7 +138,7 @@ Cách trả lại errors của Heroku cực kì đơn giản.
 
 Chỉ có 1 từ, bá đạo T____T.
 
-## GREE
+### GREE
 
 [Error Codes - GREE Developer Center](https://docs.developer.gree.net/ja/globaltechnicalspecs/api/errorcodes)
 
@@ -157,7 +157,7 @@ Chỉ có 1 từ, bá đạo T____T.
 
 Errors của GREE cũng rất đơn giản và giống như Heroku khi có link để tham khảo về lỗi đó.
 
-## Nike
+### Nike
 
 [API Error Codes](https://developer.nike.com/documentation/api-docs/error-messages/error-codes-and-responses.html)
 
@@ -187,7 +187,7 @@ Errors của GREE cũng rất đơn giản và giống như Heroku khi có link 
 
 Với Nike thì request ID yêu cầu user phải có API token, lỗi sẽ được trả về theo dạng array.
 
-## Twitter
+### Twitter
 
 [Error Codes & Responses | Twitter Developers](https://dev.twitter.com/overview/api/response-codes)
 
@@ -207,7 +207,7 @@ Với Nike thì request ID yêu cầu user phải có API token, lỗi sẽ đư
 
 Lỗi API của Twitter có đặc trưng là trả về theo dạng array.
 
-## Google
+### Google
 Ông lớn trong những ông lớn.
 [Standard Error Responses - DoubleClick Search API — Google Developers](https://developers.google.com/doubleclick-search/v2/standard-error-responses)
 
@@ -235,7 +235,7 @@ Lỗi API của Twitter có đặc trưng là trả về theo dạng array.
 Đặc trưng của google là họ có rất nhiều service và cùng thống nhất 1 định dạng JSON, do đó họ cần thêm key `domain` để xác định xem lỗi ở service nào.
 Ngoài ra, để trả lại nhiều errors cùng lúc thì key `errors` được trả vê ở dạng array.
 
-## Twillio
+### Twillio
 
 [Twilio Cloud Communications - APIs for Voice, VoIP, and Text Messaging](https://www.twilio.com/docs/api/rest/response#response-formats-exceptions)
 
@@ -255,7 +255,7 @@ Ngoài ra, để trả lại nhiều errors cùng lúc thì key `errors` đượ
 
 Cũng có trường hợp `code`, `more_info` trống.
 
-## Foursquare
+### Foursquare
 
 [Responses & Errors](https://developer.foursquare.com/overview/responses)
 
@@ -276,7 +276,7 @@ Cũng có trường hợp `code`, `more_info` trống.
 
 Đặc trưng của Foursquare là response khi lỗi và response bình thường không khác nhau. Khi xảy ra lỗi thì nội dung errors sẽ được đẩy vào key `meta`.
 
-## Flickr
+### Flickr
 
 [Flickr Services](https://www.flickr.com/services/api/response.json.html)
 
@@ -294,7 +294,7 @@ Cũng có trường hợp `code`, `more_info` trống.
 
 Error của Flickr cũng rất đơn giản, chỉ khác biệt ở key `stat`.
 
-## Linkedin
+### Linkedin
 
 ```json
 {
@@ -314,7 +314,7 @@ Error của Flickr cũng rất đơn giản, chỉ khác biệt ở key `stat`.
 
 Đặc trưng của LinkedIn là có requestID và timestamp của request. Khi cần phải phân tích lại request thì 2 key này sẽ rất tiện lợi.
 
-## Philips Hue
+### Philips Hue
 
 [API Core concepts | Philips Hue API](http://www.developers.meethue.com/documentation/api-core-concepts#_Toc259440465)
 
@@ -334,7 +334,7 @@ Error của Flickr cũng rất đơn giản, chỉ khác biệt ở key `stat`.
 * `address`: link URL xảy ra error
 * `description`: error message
 
-## Qiita
+### Qiita
 
 ```json
 {
@@ -346,29 +346,29 @@ Error của Flickr cũng rất đơn giản, chỉ khác biệt ở key `stat`.
 * `message`
 * `type`
 
-# Tổng kết
+## Tổng kết
 
-## So sánh nội dung của errors
+### So sánh nội dung của errors
 
 Tổng hợp lại những services ở trên.
 
-|  - | message  | error code  | nhiều errors  | status code  | URL chi tiết
+|  - | Message  | Error code  | Nhiều errors  | Status code  | URL chi tiết
 |---|---|---|---|---|
-| Github  |◯ | string |◯   |   |
-| Facebook |  ◯ | string, int  |   |   | |
-| Heroku  | ◯  |   |   |   |◯| |
-| Toggl | ◯ | | |◯ | | |
-| Yahoo! |◯ | | | | | |
-| GREE |◯ | int| | | ◯| |
-| Nike |◯ |int |◯ | | | |
-| Twitter |◯ |int |◯ | | | |
-| Google |◯ |string |◯ |◯ | | |
-| Twillio |◯ |int | |◯ | ◯| |
-| Foursquare |◯ |string | |◯ | | |
-| Flickr|◯ |int | | | | |
-| LinkedIn|◯ |int | |◯ | | |
-| Philips Hue|◯ |int | | | | |
-| Qiita |◯ |string | | | | |
+| Github  |&#10003; | string |&#10003;   |   |
+| Facebook |  &#10003; | string, int  |   |   | |
+| Heroku  | &#10003;  |   |   |   |&#10003;| |
+| Toggl | &#10003; | | |&#10003; | | |
+| Yahoo! |&#10003; | | | | | |
+| GREE |&#10003; | int| | | &#10003;| |
+| Nike |&#10003; |int |&#10003; | | | |
+| Twitter |&#10003; |int |&#10003; | | | |
+| Google |&#10003; |string |&#10003; |&#10003; | | |
+| Twillio |&#10003; |int | |&#10003; | &#10003;| |
+| Foursquare |&#10003; |string | |&#10003; | | |
+| Flickr|&#10003; |int | | | | |
+| LinkedIn|&#10003; |int | |&#10003; | | |
+| Philips Hue|&#10003; |int | | | | |
+| Qiita |&#10003; |string | | | | |
 
 Trong tất cả những services được phân tích này, errors đều có cấu trúc rất đơn giản và dễ hiểu cho con người, và tất cả đều chứa message để truyền đạt lỗi một cách chính xác nhất.
 
@@ -377,12 +377,12 @@ Error code là cách để giúp user dễ dàng phân tích và nắm bắt đ�
 Tuỳ theo tính chất của services mà lựa chọn trả lại 1 hay nhiều errors. Ví dụ như với những app 1 lần cho phép nhập nhiều fields, thì việc trả về nhiều errors cũng dễ xử lý hơn.
 
 
-## So sánh tên các fields
+### So sánh tên các fields
 
 Để hiển thị message, hầu hết các services đều sử dụng key `message`. Error code thì nhiều nhất là `code`, ngoài ra còn có thể thêm `type`.
 Phần lỗi nếu trả lại nhiều thì dùng `errors`, nếu không thì là `error`. Các link liên quan thì dùng `url`, `rel_url`, `more_info`.
 
-# Những vấn đề phải suy nghĩ về errors response
+## Những vấn đề phải suy nghĩ về errors response
 
 Sau khi phân tích các services ở trên, ta có thể rút ra 1 số kết luận sau :
 

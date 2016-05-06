@@ -223,28 +223,36 @@ blockquote {
         margin-bottom: .5rem;
     }
 }
-
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    margin-bottom: 16px;
+}
 .post {
     font-size: 0.8rem;
 }
 
 .post h1 {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    padding-bottom: 0.3em;
+    font-size: 30px;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+    font-weight: 400;
 }
 .post h2 {
-    margin-top: 1rem;
-    font-size: 1rem;
+    padding-bottom: 0.3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
 }
 .post h3 {
-    margin-top: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.5em;
+    line-height: 1.43;
+    font-weight: normal;
 }
 .post h4, .post h5, .post h6 {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 1.25em;
+    font-weight: normal;
 }
 
 .codinfox-changing-keywords {
@@ -278,4 +286,7 @@ blockquote {
 }
 .related-posts li h3{
     font-size: 0.8rem;
+}
+h1:first-letter , h2:first-letter, h3:first-letter, h4:first-letter {
+    text-transform: uppercase;
 }

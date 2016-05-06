@@ -9,7 +9,7 @@ comments: true
 
 Bài viết này giới thiệu về các method hay và tiện dụng trong ruby và rails như `try`, `blank?`, `present?`, pluck, ...
 
-# sử dụng Object#try(:method_name) thay vì kiểm tra nil
+## Sử dụng Object#try(:method_name) thay vì kiểm tra nil
 
 ```ruby
 if parent.children && parent.children.singleton?
@@ -28,7 +28,7 @@ end
 ```
 <!-- more -->
 
-# sử dụng blank?/present?
+## Sử dụng blank?/present?
 
 ```ruby
 # String
@@ -68,7 +68,7 @@ name = "Tom"
 name.present? # => true
 ```
 
-### sử dụng presence
+## Sử dụng presence
 
 ```ruby
 if user.name.blank?
@@ -127,7 +127,7 @@ if name = blog.user.name.presence
 end
 ```
 
-# khi kiểm tra sự tồn tại của 1 string thì nên dùng blank? thay vì nil?
+## Khi kiểm tra sự tồn tại của 1 string thì nên dùng blank? thay vì nil?
 
 Mệnh đề "string không có giá trị" thường không cần phân biệt `nil` và `""`.
 Khi sử dụng `nil?` thì lại cho 2 kết quả khác nhau.
@@ -148,7 +148,7 @@ end
 
 Tương tự như thế, khi `validates` trong Model, nếu không có lý do đặc biệt thì nên sử dụng `allow_blank: true`, không nên sử dụng `allow_nil: true`.
 
-# khi cần filter, nên dùng query thay vì logic
+## Khi cần filter, nên dùng query thay vì logic
 Ruby cung cấp rất nhiều method hay và đơn giản để thao tác với array, nhưng khi cần thực hiện filter trong model của Rails, thì nên sử dụng query để tốc độ xử lý được nhanh hơn.
 
 ```ruby
@@ -164,7 +164,7 @@ end
 ```
 
 
-# dùng pluck thay vì map
+## Dùng pluck thay vì map
 
 `pluck` là method để lấy 1 column cho trước trong các record, mà không load toàn bộ các record đó. Vì thế mà tốc độ xử lý và RAM cũng hiệu quả hơn.
 
@@ -180,7 +180,7 @@ def admin_user_ids
 end
 ```
 
-# về timezone trong Rails
+## Về timezone trong Rails
 
 Trong Rails, có 2 cách để setting timezone, cách 1 là setting trong application.rb, cách 2 là sử dụng timezone dựa theo biến số môi trường TZ.
 Nếu trong trường hợp setting giữa 2 cách này mâu thuẫn với nhau, sẽ nảy sinh ra những lỗi không thể dự đoán trước.
@@ -188,7 +188,7 @@ Vì thế, tốt hơn là thống nhất chỉ sử dụng timezone trong applic
 
 Ví dụ,  không dùng `Date.today` mà dùng `Date.current`, không dùng `Time.now` mà dùng `Time.current` ( hoặc `Time.zone.now` )
 
-# các method thời gian hay
+## Các method thời gian hay
 ```ruby
 Date.current # => Tue, 05 Nov 2013
 
@@ -269,7 +269,7 @@ date.prev_week(:monday) # => 2013-10-28
 date.next_week(:monday) # => 2013-11-11
 ```
 
-# các method thay đổi string thành số nhiều, số ít, ...
+## Các method thay đổi string thành số nhiều, số ít, ...
 ```ruby
 "my_book".camelize # => "MyBook"
 
@@ -301,7 +301,7 @@ date.next_week(:monday) # => 2013-11-11
 "MyBook".tableize  # => "my_books"
 ```
 
-# squish xoá các space không cần thiết
+## Squish xoá các space không cần thiết
 
 ```ruby
 "    My    \r\n  \t   \n   books       ".squish # => "My books"

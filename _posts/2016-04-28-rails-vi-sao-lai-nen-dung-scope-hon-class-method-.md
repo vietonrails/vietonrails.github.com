@@ -12,7 +12,7 @@ comments: true
 
 <!-- more -->
 
-# Về bản chất thì scope là class method
+## Về bản chất thì scope là class method
 Trong Rails thì scope được định nghĩa như là 1 class method động.
 
 ```ruby
@@ -37,7 +37,7 @@ end
 
 Về mặt bản chất, scope là 1 class method. Vậy tại sao lại nên dùng scope hơn class method ? Dưới đây là 2 lý do :
 
-# scope luôn đảm bảo sẽ thực hiện method chain
+## scope luôn đảm bảo sẽ thực hiện method chain
 Giả sử ta có 2 scope như sau :
 
 ```ruby
@@ -82,7 +82,7 @@ NoMethodError: undefined method `recent' for nil:NilClass
 
 Trong trường hợp những query phát sinh trong scope là `nil`, scope sẽ trả về `.all`, vì thế mà quá trình chain vẫn diễn ra bình thường.
 
-# scope có thể mở rộng được
+## scope có thể mở rộng được
 Trong các thư viện pagination, cách viết như sau thường được sử dụng :
 
 ```ruby

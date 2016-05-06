@@ -7,7 +7,7 @@ tags: [code style, tips]
 comments: true
 ---
 
-# count: đếm số yếu tố thoả mãn điều kiện
+## count: đếm số yếu tố thoả mãn điều kiện
 
 ```ruby
 def count_admin(users)
@@ -25,7 +25,7 @@ def count_admin(users)
 end
 ```
 
-# map: tạo ra 1 array từ 1 array khác
+## map: tạo ra 1 array từ 1 array khác
 
 ```ruby
 def user_names(users)
@@ -45,7 +45,7 @@ end
 
 <!-- more -->
 
-# flat_map: kết quả của map sẽ được làm "phẳng"
+## flat_map: kết quả của map sẽ được làm "phẳng"
 
 ```ruby
 nested_array = [[1, 2, 3], [4, 5, 6]]
@@ -63,7 +63,7 @@ flat_array = nested_array.flat_map {|array| array.map {|n| n * 10 } }
 
 
 
-# compact: lấy các yếu tố khác nil
+## compact: lấy các yếu tố khác nil
 
 ```ruby
 numbmers_and_nil = [1, 2, 3, nil, nil, 6]
@@ -75,7 +75,7 @@ numbers_and_nil = [1, 2, 3, nil, nil, 6]
 only_numbers = numbers_and_nil.compact # => [1, 2, 3, 6]
 ```
 
-# any?: kiểm tra có bất kì 1 yếu tố nào thoả mãn hay không
+## any?: kiểm tra có bất kì 1 yếu tố nào thoả mãn hay không
 
 ```ruby
 def contains_nil?(users)
@@ -94,7 +94,7 @@ end
 
 `all?` trả về `true` nếu tất cả các yếu tố đều thoả mãn điều kiện.
 
-# empty?: nếu không có yếu tố nào thì sẽ trả về true
+## empty?: nếu không có yếu tố nào thì sẽ trả về true
 
 ```ruby
 puts "empty!" if users.size == 0
@@ -104,7 +104,7 @@ puts "empty!" if users.size == 0
 puts "empty!" if users.empty?
 ```
 
-# first/last: trả lại yếu tố đầu tiên / cuối cùng
+## first/last: trả lại yếu tố đầu tiên / cuối cùng
 
 ```ruby
 first_user = users[0]
@@ -116,7 +116,7 @@ first_user = users.first
 last_user = users.last
 ```
 
-# sample: lấy ngẫu nhiên 1 yếu tố
+## sample: lấy ngẫu nhiên 1 yếu tố
 
 ```ruby
 users[rand(users.size)]
@@ -126,7 +126,7 @@ users[rand(users.size)]
 users.sample
 ```
 
-# each_with_index: vòng lặp each với index
+## each_with_index: vòng lặp each với index
 
 ```ruby
 counter = 0
@@ -144,7 +144,7 @@ users.each_with_index |user, counter|
 end
 ```
 
-# join: chuyển 1 array về thành 1 chuỗi
+## join: chuyển 1 array về thành 1 chuỗi
 
 ```ruby
 def numbers_text(numbers)

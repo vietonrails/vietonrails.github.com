@@ -15,7 +15,7 @@ Builder pattern được sử dụng trong những trường hợp sau.
 * Có những việc phải check khi cần tạo ra object
 ```
 
-# Builder pattern là gì
+## Builder pattern là gì
 
 Builder là 1 design pattern được tạo thành từ 3 thành phần :
 
@@ -25,7 +25,7 @@ Builder là 1 design pattern được tạo thành từ 3 thành phần :
 
 <!-- more -->
 
-# Sample 1
+## Sample 1
 Ví dụ đơn giản như sau : mô phỏng quá trình tạo ra 1 cốc nước đường.
 Phần ConcreteBuilder ở đây sẽ tạo ra class nước đường. Class nước đường sẽ có 2 biến số là nước và đường.
 
@@ -110,7 +110,7 @@ Tổng kết lại sẽ như sau :
 * Director : vai trò nhận yêu cầu và xử lý thông qua builder.
 ```
 
-# Sample 2
+## Sample 2
 
 Ví dụ 1 đã có nước đường thì ví dụ 2 ta sẽ thêm vào nước muối.
 

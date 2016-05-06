@@ -19,16 +19,16 @@ Môi trường mình đang làm việc :
 
 <!-- more -->
 
-# TensorFlow
+## TensorFlow
 
 TensorFlow là 1 library do Google phát triển và opensource vào tháng 11/2015. TensorFlow được cho là sử dụng trong nhiều service của Google.
 
-## Vài nét về TensorFlow
+### Vài nét về TensorFlow
 
 1. Sử dụng trong rất nhiều ứng dụng của Google như phần loại email của Gmail, nhận biết phát âm và dịch tự động, nhận biết khuôn mặt trong Google Photo, tối ưu hoá kết quả tìm kiếm, quảng cáo trong Youtube, ...
 2. Đặc trưng của TensorFlow là xử lý được tất cả các loại dữ liệu có thể biểu diễn dưới dạng data flow graph hay low level như xử lý chữ viết tay. TensorFlow được viết bằng C++, thao tác interface bằng Python vì thế performance rất tốt, dùng được cả CPU lẫn GPU nên TF có thể chạy trên cả PC thông thường lẫn 1 server cực lớn, thậm chí cả smartphone cũng có thể sử dụng được.
 
-## Vì sao Google opensource TF ?
+### Vì sao Google opensource TF ?
 
 License của TF là Apache 2.0, tức là có thể sử dụng trong các sản phẩm thương mại khác. Tại sao 1 công cụ tuyệt vời được sử dụng trong hầu hết các sản phẩm của Google lại được opensource 1 cách tự do như thế ? Và đây là lời giải thích của Google :
 
@@ -36,13 +36,13 @@ License của TF là Apache 2.0, tức là có thể sử dụng trong các sả
 
 Đó là lý do mà Google đã, đang và sẽ luôn đi đầu trong giới công nghệ.
 
-## Configure
+### Configure
 
 [Hướng dẫn install tensorflow của google](https://www.tensorflow.org/versions/master/get_started/os_setup.html)
 
 Yêu cầu là phải có Python 2.7 hoặc Python 3.3+.
 
-### install pip
+#### Install pip
 
 `pip` là 1 cách install các library rất thuận tiện của Python.
 
@@ -50,7 +50,7 @@ Yêu cầu là phải có Python 2.7 hoặc Python 3.3+.
 $ sudo easy_install pip
 ```
 
-### install virtualenv
+#### Install virtualenv
 
 `virtualenv` là tool quản lý version của python giống rvm.
 
@@ -58,7 +58,7 @@ $ sudo easy_install pip
 $ sudo pip install --upgrade virtualenv
 ```
 
-### tạo môi trường virtualenv
+#### Tạo môi trường virtualenv
 
 ```bash
 $ virtualenv --system-site-packages ~/tensorflow
@@ -67,7 +67,7 @@ $ source ~/tensorflow/bin/activate
 
 Đến đây thì màn hình command sẽ thay đổi.
 
-### install TF
+#### Install TF
 
 ```bash
 (tensorflow)$ pip install --upgrade https://storage.googleapis.com/tensorflow/mac/tensorflow-0.5.0-py2-none-any.whl
@@ -79,7 +79,7 @@ Kết quả như sau là OK.
 Successfully installed numpy-1.10.2 six-1.10.0 tensorflow-0.5.0
 ```
 
-## Hello World
+### Hello World
 
 Tạo 1 file tên `hello_world.py` trong thư mục `tensorflow` trên và code nội dung như sau :
 
@@ -111,7 +111,7 @@ I tensorflow/core/common_runtime/local_session.cc:45] Local session inter op par
 hello, tensorflow!
 ```
 
-## Tutorial : MNIST for ML Beginners
+### Tutorial : MNIST for ML Beginners
 
 Đây là bài tutorial cơ bản của TensorFlow. Trong bài tutorial TF sẽ được sử dụng để học và nhận dạng chữ viết tay.
 
@@ -169,7 +169,7 @@ Test Data Eval:
 
 Độ chính xác của cách training này là khoảng 90%. Bằng 1 vài thay đổi bạn có thể nâng độ chính xác lên 99,8% (!). Mình sẽ phân tích trong 1 bài viết khác cụ thể hơn.
 
-## sử dụng TensorBoard
+### sử dụng TensorBoard
 
 Tiếp theo là 1 tính năng rất thú vị khác của TF. Đó là hiển thị kết quả training bằng graph.
 

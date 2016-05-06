@@ -5,8 +5,9 @@ description: ""
 category: Rails
 tags: [ cells, tối ưu code ]
 comments: true
+author: at-haht
 ---
-# Cells là gì
+## Cells là gì
 
 Khi làm việc với view của Rails, không ngày nào mà không sử dụng tới method partial. Tuy nhiên, partial chỉ là 1 tính năng để gộp và tái sử dụng code view nhiều lần mà thôi. Khi muốn gộp chung cả logic vào để tạo ra template thì vấn đề sẽ rất phức tạp.
 
@@ -16,13 +17,13 @@ cells là 1 gem được sử dụng để gộp cả view lẫn controller lạ
 
 <!-- more -->
 
-# Những trường hợp dùng cells
+## Những trường hợp dùng cells
 
 * hiển thị popup login
 * hiển thị ranking ở side menu
 * ...
 
-## Ví dụ với popup login
+### Ví dụ với popup login
 
 Khi sử dụng partial, ta thường viết như sau :
 
@@ -57,7 +58,7 @@ Có 2 cách giải quyết ở đây :
 1. định nghĩa @user ở trong tất cả các action có gọi popup_login.
 2. viết trong application controller
 
-## Các viết trong application_controller
+### Cách viết trong application_controller
 
 Viết 1 cách đơn giản như sau :
 
@@ -73,7 +74,7 @@ end
 
 Lần này chỉ là popup_login, nên logic còn khá đơn giản. Nếu mọi thứ phức tạp hơn như ranking, comment, ... thì code chắc chắn sẽ không ngắn gọn và dễ hiểu như thế.
 
-## Viết bằng cells
+### Viết bằng cells
 
 
 ```haml
@@ -122,7 +123,7 @@ end
      });
 ```
 
-# Sử dụng cells
+## Sử dụng cells
 
 Thêm vào Gemfile
 
