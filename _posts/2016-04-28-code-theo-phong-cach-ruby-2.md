@@ -5,6 +5,7 @@ description: ""
 category: Ruby
 tags: [code style, tips]
 comments: true
+author: rockkhuya
 ---
 
 ## Khi khai báo 1 số lớn, thêm "_" vào sẽ dễ đọc hơn

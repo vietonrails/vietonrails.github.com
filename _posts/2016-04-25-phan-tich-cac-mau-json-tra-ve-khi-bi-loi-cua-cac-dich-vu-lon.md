@@ -5,6 +5,7 @@ description: ""
 category: API
 tags: [json, errors message]
 comments: true
+author: rockkhuya
 ---
 
 Khi viết REST API, một trong những vấn đề cần phải giải quyết triệt để và thống nhất là cách trả về JSON khi xảy ra lỗi.

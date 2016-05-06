@@ -5,6 +5,7 @@ description: ""
 category: Rails
 tags: [try method, blank method, present method, presence method, pluck]
 comments: true
+author: rockkhuya
 ---
 
 Bài viết này giới thiệu về các method hay và tiện dụng trong ruby và rails như `try`, `blank?`, `present?`, pluck, ...

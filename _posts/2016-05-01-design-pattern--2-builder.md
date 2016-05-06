@@ -5,6 +5,7 @@ description: ""
 category: Ruby
 tags: [design pattern, builder]
 comments: true
+author: rockkhuya
 ---
 
 Builder pattern được sử dụng trong những trường hợp sau.

@@ -5,7 +5,7 @@ description: ""
 category: Rails
 tags: [ cells, tối ưu code ]
 comments: true
-author: at-haht
+author: rockkhuya
 ---
 ## Cells là gì
 

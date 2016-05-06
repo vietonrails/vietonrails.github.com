@@ -5,6 +5,7 @@ description: ""
 category: Configure
 tags: [brew update]
 comments: true
+author: rockkhuya
 ---
 
 Đang định cài Hugo về chơi mà update brew thì gặp tình trạng này :

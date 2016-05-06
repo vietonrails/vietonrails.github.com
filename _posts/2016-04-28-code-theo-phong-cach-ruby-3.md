@@ -5,6 +5,7 @@ description: ""
 category: Ruby
 tags: [code style, tips]
 comments: true
+author: rockkhuya
 ---
 
 ## count: đếm số yếu tố thoả mãn điều kiện

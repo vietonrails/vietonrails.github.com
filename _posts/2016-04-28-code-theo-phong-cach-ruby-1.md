@@ -5,6 +5,7 @@ description: ""
 category: Ruby
 tags: [code style, tips]
 comments: true
+author: rockkhuya
 ---
 Bài viết này liệt kê những cách viết code theo phong cách Ruby, ngắn gọn và dễ nhìn hơn.
 

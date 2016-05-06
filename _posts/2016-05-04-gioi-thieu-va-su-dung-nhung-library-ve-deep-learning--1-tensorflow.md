@@ -5,7 +5,7 @@ description: ""
 category: AI
 tags: [deep learning, tensorflow]
 comments: true
-author: at-anhlt
+author: rockkhuya
 ---
 Bài viết này giới thiệu và hướng dẫn cách install và sử dụng các library nổi tiếng về DeepLearning hiện tại như TensorFlow, Chainer, Caffe, DeepDream.
 Bài viết này không đi sâu về khái niệm và giải thích bản chất thuật toán của vấn đề, đơn giản là cách sử dụng và 1 phần nào đó là khả năng của Deep Learning.

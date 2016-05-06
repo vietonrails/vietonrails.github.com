@@ -5,6 +5,7 @@ description: ""
 category: Rails
 tags: [active record, scopes, class methods]
 comments: true
+author: rockkhuya
 ---
 
 [Active Record scopes vs class methods](http://blog.plataformatec.com.br/2013/02/active-record-scopes-vs-class-methods/)
