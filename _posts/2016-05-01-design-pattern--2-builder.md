@@ -130,7 +130,7 @@ class SaltWater
 end
 ```
 
-Tiếp theo ta sẽ sửa lại class nước đường ở trên. Ta cũng sẽ thêm vào 1 class chung là `add_material` để thêm yếu tố đường vào. 
+Tiếp theo ta sẽ sửa lại class nước đường ở trên. Ta cũng sẽ thêm vào 1 class chung là `add_material` để thêm yếu tố đường vào.
 
 ```ruby
 # SugarWater : ConcreteBuilder
@@ -151,7 +151,7 @@ end
 Tiếp theo sẽ là Builder. Builder sẽ có 2 điểm thay đổi sau :
 
 1. Sửa tên class Builder thành WaterWithMaterialBuilder
-2. method thêm thành phần (muối, đường) sẽ đổi tên thành `add_material`
+2. Method thêm thành phần (muối, đường) sẽ đổi tên thành `add_material`
 
 ```ruby
 class WaterWithMaterialBuilder
@@ -192,7 +192,7 @@ class Director
 end
 ```
 
-Giờ ta sẽ xác nhận lại kết quả của đoạn code trên. Đầu tiên là tạo nước đường. kết quả sẽ trả về giống như sample 1. 
+Giờ ta sẽ xác nhận lại kết quả của đoạn code trên. Đầu tiên là tạo nước đường. kết quả sẽ trả về giống như sample 1.
 
 ```ruby
 builder = WaterWithMaterialBuilder.new(SugarWater)
@@ -220,5 +220,5 @@ Tổng kết lại sẽ như sau :
 * Đề bài : Tạo 1 cốc nước với thành phần khác (muối, đường)
 * SugarWater, SaltWater : vai trò ConcreteBuilder, mang method thay đổi thành phần nước, thành phần phụ. ConcreteBuilder có thể có nhiều.
 * WaterWithMaterialBuilder : vai trò Builder, mang interface thêm nước, thêm thành phần phụ, và trả lại kết quả. Builder chỉ có duy nhất.
-* Director : vai trò nhận yêu cầu và xử lý thông qua builder.  Director chỉ có duy nhất. 
+* Director : vai trò nhận yêu cầu và xử lý thông qua builder.  Director chỉ có duy nhất.
 ```

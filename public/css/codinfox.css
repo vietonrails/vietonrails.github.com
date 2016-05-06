@@ -16,7 +16,7 @@
 
 .masthead {
     z-index: 1;
-    background-color: rgba(255,255,255,0.75);
+    background-color: #fff;
 }
 
 .sidebar-toggle {
@@ -30,7 +30,7 @@
     }
 
     .container.content {
-        padding-top: 6rem;
+        padding-top: 5rem;
     }
 
     /*.codinfox-masthead-bg {
@@ -61,6 +61,10 @@ a.codinfox-profile-photo>img {
     margin: 0;
 }
 
+.masthead a:focus, .masthead a:hover
+{
+    text-decoration: none !important;
+}
 .codinfox-index-bg {
     text-align: center;
     font-size: 0.75rem;
@@ -97,56 +101,93 @@ div.codinfox-index-bg>img {
     max-width: 40%;
     height: auto;
 }
-
+.posts h2{
+    font-size: 0.825rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ac4142;
+    margin-bottom: 0;
+}
 /* Category List */
 /*.related {
 padding-top: 2rem;
 padding-bottom: 2rem;
 border-top: 1px solid #eee;
 }*/
-.codinfox-category-list {
-    padding-left: 1rem;
+.codinfox-category-list{
+    padding-left: 0;
+}
+.codinfox-category-list li{
     list-style: none;
+    counter-increment: decimal;
+}
+.codinfox-category-list li:before{
+    content: counter(decimal) ".";
+    padding-right: 0.5rem;
+    font-size: 0.8rem;
 }
 .codinfox-category-list h3 {
-    font-size: 1rem;
+    font-size: 0.75rem;
     margin-top: 0;
+    display: inline;
+}
+.codinfox-category-list  li:only-child:before{
+ content: "";
+ display: none;
+}
+
+.theme-base-08 .codinfox-category-list h3 a{
+    color: #666;
+}
+.theme-base-08 .codinfox-category-list h3 a:hover{
+    color: #ac4142;
 }
 .codinfox-category-list li small {
-    font-size: 75%;
+    font-size: 0.7rem;
     color: #999;
+    text-transform: lowercase;
 }
 .codinfox-category-list li a:hover {
-    color: #6a9fb5;
     text-decoration: none;
-}
-.codinfox-category-list li a:hover small {
-    color: inherit;
 }
 
 .codinfox-category-mark {
-    padding: 0 .5rem 0 .5rem;
-    border-radius: 5px;
-    background: #f0f0f0;
-    color: #999;
-    text-decoration: none;
-    margin-bottom: .75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    border-bottom: 0.1rem solid #ececec;
+    background: #f8f8f8;
+    padding: 0 0.2rem;
+    text-transform: uppercase;
+    font-size: 0.675rem;
 }
 
 .codinfox-category-mark:hover {
-    font-weight: bold;
+    color: #000 !important;
 }
 
 .codinfox-tag-mark{
-    font-size: 75%;
-    padding: 0 .5rem 0 .5rem;
-    border-radius: 5px;
-    background: #e7f2f7;
+    font-size: 0.7rem;
+    padding: 0 .2rem 0 .5rem;
+    background: #f8f8f8;
     color: #6a9fb5;
 }
-
+.codinfox-post-more a{
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    border-bottom: 0.1rem solid #ececec;
+    background: #f8f8f8;
+    padding: 0.2rem 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.5rem;
+}
 .page-title {
     text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ac4142;
 }
 
 html {
@@ -184,15 +225,18 @@ blockquote {
 }
 
 .post {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .post h1 {
-    font-size: 1.6rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 .post h2 {
     margin-top: 1rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 .post h3 {
     margin-top: 1.5rem;
@@ -201,11 +245,6 @@ blockquote {
 .post h4, .post h5, .post h6 {
     margin-top: 1rem;
     font-size: 1rem;
-}
-
-.post h2::first-letter {
-    font-size: xx-large;
-    text-transform: uppercase;
 }
 
 .codinfox-changing-keywords {
@@ -236,4 +275,7 @@ blockquote {
     top:0;
     animation: slide-in 0.6s;
     -webkit-animation: slide-in 0.6s;
+}
+.related-posts li h3{
+    font-size: 0.8rem;
 }

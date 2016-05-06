@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "code theo phong cách Ruby (2)"
+title: "Code theo phong cách Ruby (2)"
 description: ""
 category: Ruby
 tags: [code style, tips]
@@ -62,7 +62,7 @@ puts "Thương #{quotient}"      # => Thương 4
 puts "Số dư  #{remainder}"     # => Số dư  2
 ```
 
-Tương tự với method `each` của 1 hash. 
+Tương tự với method `each` của 1 hash.
 
 ```ruby
 # key và value được lấy về dưới dạng array
@@ -109,7 +109,7 @@ end
 
 ```ruby
 def twitter_client
-  @twitter_client ||= Twitter::REST::Client.new 
+  @twitter_client ||= Twitter::REST::Client.new
 end
 ```
 
@@ -120,7 +120,7 @@ def process_user(user)
   begin
     send_to_mail(user)
   rescue
-    # xử lý 
+    # xử lý
   end
 end
 ```
@@ -134,10 +134,10 @@ end
 ```
 
 # gọi rescue là StandardError thay vì Exception
-Với những người đã từng học qua Java hay C# thì thường có thói quen sử dụng `Exception` để bắt lỗi ngoại lệ. 
-Tuy nhiên, khi bắt `Exception` trong Ruby cũng đồng nghĩa với việc bắt luôn những lỗi cực kì nguy hiểm như `NoMemoryError`. 
+Với những người đã từng học qua Java hay C# thì thường có thói quen sử dụng `Exception` để bắt lỗi ngoại lệ.
+Tuy nhiên, khi bắt `Exception` trong Ruby cũng đồng nghĩa với việc bắt luôn những lỗi cực kì nguy hiểm như `NoMemoryError`.
 
-`StandardError` là 1 subclass của `Exception` để bắt lỗi thực hiện của code. rescue mặc định là sẽ bắt `StandardError` và các subclass của nó nên có thể bỏ qua khi viết code. 
+`StandardError` là 1 subclass của `Exception` để bắt lỗi thực hiện của code. rescue mặc định là sẽ bắt `StandardError` và các subclass của nó nên có thể bỏ qua khi viết code.
 
 ```ruby
 def process_user(user)
@@ -197,7 +197,7 @@ def find_admin(users)
 end
 ```
 
-Sử dụng `find_index` nếu muốn trả về index của yếu tố đầu tiên tìm thấy. 
+Sử dụng `find_index` nếu muốn trả về index của yếu tố đầu tiên tìm thấy.
 
 # select: lấy tất cả những yếu tố thoả mãn điều kiện
 

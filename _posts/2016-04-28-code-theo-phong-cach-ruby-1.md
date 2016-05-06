@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "code theo phong cách Ruby (1)"
+title: "Code theo phong cách Ruby (1)"
 description: ""
 category: Ruby
 tags: [code style, tips]
@@ -31,7 +31,7 @@ user.destroy if !user.active?
 user.destroy unless user.active?
 ```
 
-Tuy nhiên, nếu điều kiện phía sau unless phức tạp, có `and`, `or`, thì nên dùng `if` cho dễ hiểu. 
+Tuy nhiên, nếu điều kiện phía sau unless phức tạp, có `and`, `or`, thì nên dùng `if` cho dễ hiểu.
 
 ```ruby
 user.destroy unless (user.active? || user.admin?) && !user.spam?
@@ -53,7 +53,7 @@ end
 user.admin? ? "I appreciate for that." : "Thanks"
 ```
 
-Tuy nhiên, chỉ nên dùng cho những đoạn code có điều kiện đơn giản, không nên dùng với những đoạn code lồng nhau. 
+Tuy nhiên, chỉ nên dùng cho những đoạn code có điều kiện đơn giản, không nên dùng với những đoạn code lồng nhau.
 
 ```ruby
 # khó đọc
@@ -75,7 +75,7 @@ if user = find_user
 end
 ```
 
-Tuy nhiên, cách viết này có thể gây hiểu nhầm cho người đọc: "lỗi type gõ thiếu dấu `=`, đáng ra phải là `==` hoặc `!=` chứ". Vì thế có người thích mà cũng có người không thích cách viết này. 
+Tuy nhiên, cách viết này có thể gây hiểu nhầm cho người đọc: "lỗi type gõ thiếu dấu `=`, đáng ra phải là `==` hoặc `!=` chứ". Vì thế có người thích mà cũng có người không thích cách viết này.
 
 # Xác nhận điều kiện từ các class con
 
@@ -88,7 +88,7 @@ if parent.children
 end
 ```
 
-Viết gọn lại 
+Viết gọn lại
 ```ruby
 if parent.children && parent.children.singleton?
   singleton = parent.children.first
@@ -99,7 +99,7 @@ end
 
 # Không dùng return ở cuối method
 
-Các ngôn ngữ khác phải cần, nhưng với ruby, cách viết không có return có vẻ được yêu thích hơn. 
+Các ngôn ngữ khác phải cần, nhưng với ruby, cách viết không có return có vẻ được yêu thích hơn.
 
 ```ruby
 def build_message(user)
@@ -148,9 +148,9 @@ end
 "Hello, #{user.name}!"
 ```
 
-## freeze các hằng số
+## Freeze các hằng số
 
-`freeze` là cách khai báo một hằng số. Dùng cách này để tránh trường hợp hằng số bị thay đổi trong quá trình làm việc. 
+`freeze` là cách khai báo một hằng số. Dùng cách này để tránh trường hợp hằng số bị thay đổi trong quá trình làm việc.
 
 ## Chuỗi kí tự
 
@@ -165,7 +165,7 @@ CONTACT_PHONE_NUMBER = "03-1234-5678".freeze
 CONTACT_PHONE_NUMBER << "@#$%^" # => RuntimeError: can't modify frozen String
 ```
 
-## array
+## Array
 
 ```ruby
 ADMIN_NAMES = ["Tom", "Alice"]
@@ -180,7 +180,7 @@ ADMIN_NAMES << "Taro" # => RuntimeError: can't modify frozen Array
 
 # Khi tạo 1 array,  dùng %w( )、%i( ) thay cho []
 
-Trường hợp muốn tạo 1 array các chuỗi kí tự, dùng `%w( )` sẽ dễ viết và ngắn hơn. 
+Trường hợp muốn tạo 1 array các chuỗi kí tự, dùng `%w( )` sẽ dễ viết và ngắn hơn.
 
 ```ruby
 actions = ['index', 'new', 'create']
@@ -206,5 +206,5 @@ names = users.map{|user| user.name }
 names = users.map(&:name)
 ```
 
-Không chỉ có `map` mà cả `each` ,`select` hay các block khác đều có thể dùng cách viết này. 
+Không chỉ có `map` mà cả `each` ,`select` hay các block khác đều có thể dùng cách viết này.
 

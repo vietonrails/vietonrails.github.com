@@ -69,6 +69,11 @@ body {
 a {
   color: #268bd2;
   text-decoration: none;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
 }
 a strong {
   color: inherit;
@@ -76,7 +81,7 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  /* text-shadow: 1px 0 0 #000000; */
 }
 
 /* Headings */
@@ -118,6 +123,7 @@ strong {
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 
 dt {
@@ -328,8 +334,7 @@ tbody tr:nth-child(odd) th {
  * page is wrapped in `.page` and is only used on the page layout.
  */
 
-.page,
-.post {
+.page {
   margin-bottom: 4em;
 }
 

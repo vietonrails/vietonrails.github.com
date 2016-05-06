@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "code theo phong cách Ruby (3)"
+title: "Code theo phong cách Ruby (3)"
 description: ""
 category: Ruby
 tags: [code style, tips]
@@ -92,7 +92,7 @@ def contains_nil?(users)
 end
 ```
 
-`all?` trả về `true` nếu tất cả các yếu tố đều thoả mãn điều kiện. 
+`all?` trả về `true` nếu tất cả các yếu tố đều thoả mãn điều kiện.
 
 # empty?: nếu không có yếu tố nào thì sẽ trả về true
 
@@ -104,7 +104,7 @@ puts "empty!" if users.size == 0
 puts "empty!" if users.empty?
 ```
 
-# first/last: trả lại yếu tố đầu tiên / cuối cùng 
+# first/last: trả lại yếu tố đầu tiên / cuối cùng
 
 ```ruby
 first_user = users[0]

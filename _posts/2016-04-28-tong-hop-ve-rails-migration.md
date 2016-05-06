@@ -7,7 +7,7 @@ tags: [migration]
 comments: true
 ---
 
-Khi cần thay đổi DB schema trong Rails, cách làm thông thường nhất là sử dụng command `rails generate migration`, nhưng có lẽ hầu hết mọi người vẫn chưa phát huy hết sự tiện lợi của command này. Bài viết này sẽ tổng hợp cách sử dụng command này. 
+Khi cần thay đổi DB schema trong Rails, cách làm thông thường nhất là sử dụng command `rails generate migration`, nhưng có lẽ hầu hết mọi người vẫn chưa phát huy hết sự tiện lợi của command này. Bài viết này sẽ tổng hợp cách sử dụng command này.
 
 <!-- more -->
 
@@ -21,7 +21,7 @@ $ rails generate migration tên_class
 $ rails generate model tên_model
 ```
 
-tên_class thế nào cũng được, nhưng tốt hơn là tạo thói quen đặt tên theo cấu trúc "action + table name". Khi đó, Rails sẽ tạo 1 file `/db/migrate/timestamp_tên_class.rb`. Trong file này ta sẽ thêm các phần để thay đổi schema. 
+tên_class thế nào cũng được, nhưng tốt hơn là tạo thói quen đặt tên theo cấu trúc "action + table name". Khi đó, Rails sẽ tạo 1 file `/db/migrate/timestamp_tên_class.rb`. Trong file này ta sẽ thêm các phần để thay đổi schema.
 
 # Tạo table
 
@@ -29,7 +29,7 @@ tên_class thế nào cũng được, nhưng tốt hơn là tạo thói quen đ�
 $ rails g model tên_model tên_field:định_dạng:(unique|index) các_thông_số_khác
 ```
 
-Ví dụ như muốn tạo 1 table users như dưới đây : 
+Ví dụ như muốn tạo 1 table users như dưới đây :
 
 ```bash
 mysql> desc users;
@@ -48,12 +48,12 @@ mysql> desc users;
 $ rails g model User uuid:string:unique name:string
 ```
 
-`id`, `created_at`, `updated_at` được thêm vào tự động. 
+`id`, `created_at`, `updated_at` được thêm vào tự động.
 
 ## Định dạng
 
 - string: chuỗi kí tự ngắn
-- text: chuỗi kí tự dài 
+- text: chuỗi kí tự dài
 - integer
 - float: số phức
 - decimal : số phức (độ chính xác cao hơn)
@@ -95,7 +95,7 @@ database: hoge_development
 
 # Thay đổi column đã tạo
 
-Trong trường hợp muốn thay đổi column đã có. 
+Trong trường hợp muốn thay đổi column đã có.
 
 ```bash:command
 $ rails g migration ChangeColumnToUser
@@ -130,19 +130,19 @@ change_column :table_name, :column_name, :type, null: true
 change_column :table_name, :column_name, :type, null: false
 ```
 
-### index
+### Index
 
 ```ruby:/db/migrate/example.rb
 change_column :table_name, :column_name, :type, index: true
 ```
 
-### default
+### Default
 
 ```ruby:/db/migrate/example.rb
 change_column :table_name, :column_name, :type, default: "fifo"
 ```
 
-### length
+### Length
 
 ```ruby:/db/migrate/example.rb
 # varchar(12)
