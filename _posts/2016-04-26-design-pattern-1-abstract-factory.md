@@ -5,12 +5,13 @@ description: ""
 category: Ruby
 tags: [design pattern, abstract factory]
 comments: true
+author: rockkhuya
 ---
 Abstract Factory là pattern có nhiệm vụ tạo ra các object và đảm bảo các object này không mâu thuẫn với nhau.
 
-# Ví dụ và code
+## Ví dụ và code
 
-Để giải thích về Abstract Factory ta lấy ví dụ về 1 cái hồ như sau : 
+Để giải thích về Abstract Factory ta lấy ví dụ về 1 cái hồ như sau :
 
 ```
 * Các class động vật
@@ -30,7 +31,7 @@ Abstract Factory là pattern có nhiệm vụ tạo ra các object và đảm b�
   * Frog và Algae
 ```
 
-Tiếp theo ta sẽ viết code để thoả mãn điều kiện trên. 
+Tiếp theo ta sẽ viết code để thoả mãn điều kiện trên.
 
 <!-- more -->
 
@@ -90,14 +91,14 @@ Tiếp theo, trước khi tạo ra hồ ta phải nghĩ về các quy ước v�
   * Frog và Algae
 ```
 
-Để bảo vệ các quy ước này - hay nói cách khác là tạo ra các object không mâu thuẫn với nhau - ta sẽ sử dụng Abstract Factory pattern. Trong ví dụ này, để đảm bảo tạo ra những hệ sinh thái trong hồ, ta sẽ sử dụng 2 class sau. 
+Để bảo vệ các quy ước này - hay nói cách khác là tạo ra các object không mâu thuẫn với nhau - ta sẽ sử dụng Abstract Factory pattern. Trong ví dụ này, để đảm bảo tạo ra những hệ sinh thái trong hồ, ta sẽ sử dụng 2 class sau.
 
 ```
 * Tạo ra Frog và Algae => FrogAndAlgaeFactory
 * Tạo ra Duck và WaterLily => DuckAndWaterLilyFactory
 ```
 
-Tiếp theo, dựa trên 2 class này, ta sẽ  viết thêm class OrganismFactory để tạo ra hệ sinh thái hồ. 
+Tiếp theo, dựa trên 2 class này, ta sẽ  viết thêm class OrganismFactory để tạo ra hệ sinh thái hồ.
 
 ```ruby
 # Tạo ra hệ sinh thái hồ (Abstract Factory)
@@ -156,7 +157,7 @@ class DuckAndWaterLilyFactory < OrganismFactory
 end
 ```
 
-Giờ hãy chạy thử code trên xem sao :D 
+Giờ hãy chạy thử code trên xem sao :D
 
 ```ruby
 factory = FrogAndAlgaeFactory.new(4,1)
@@ -182,11 +183,11 @@ plants.each { |plant| plant.grow }
 #=> WaterLily 1 growing
 ```
 
-Như vậy ta đã có thể tạo ra những hệ sinh thái hồ mà không bị mâu thuẫn với quy ước ban đầu. 
+Như vậy ta đã có thể tạo ra những hệ sinh thái hồ mà không bị mâu thuẫn với quy ước ban đầu.
 
-# Cấu trúc của Abstract Factory
+## Cấu trúc của Abstract Factory
 
-Abstract Factory gồm có 3 phần quan trọng sau : 
+Abstract Factory gồm có 3 phần quan trọng sau :
 
 ```
 AbstractFactory: Thực hiện xử lý các phần chung của ConcreteFactory(trong ví dụ này là Pond)
@@ -196,7 +197,7 @@ Product: Là những object được sinh ra từ ConcreteFactory
 (trong ví dụ này là Duck， Frog, WaterLily, Algae)
 ```
 
-# Ưu điểm của Abstract Factory 
+## Ưu điểm của Abstract Factory
 
 ```
 * Tạo ra 1 nhóm các objects có liên quan tới nhau

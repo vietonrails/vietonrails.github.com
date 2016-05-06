@@ -5,6 +5,7 @@ description: ""
 category: Configure
 tags: [brew update]
 comments: true
+author: rockkhuya
 ---
 
 Đang định cài Hugo về chơi mà update brew thì gặp tình trạng này :
@@ -39,7 +40,7 @@ git reset --hard && git clean -df
 
 ## change lại quyền của folder /usr/local
 
-Khi sử dụng `brew doctor` thì gặp vấn đề này : 
+Khi sử dụng `brew doctor` thì gặp vấn đề này :
 
 ```text
 local|master brew doctor
@@ -60,17 +61,17 @@ We do not provide support for this pre-release version.
 You may encounter build failures or other breakage.
 ```
 
-Trong phần warning thì folder `/usr/local` không có quyền write, nên ta sẽ cấp quyền như sau : 
+Trong phần warning thì folder `/usr/local` không có quyền write, nên ta sẽ cấp quyền như sau :
 
 ```text
 sudo chown -R $(whoami):admin /usr/local
 ```
 
-`brew doctor` lại thì thấy vấn đề đã được giải quyết. 
+`brew doctor` lại thì thấy vấn đề đã được giải quyết.
 
-## brew update
+## Brew update
 
-Cuối cùng thì thử xem `brew update` có hoạt động bình thường không : 
+Cuối cùng thì thử xem `brew update` có hoạt động bình thường không :
 
 ```text
 brew update
@@ -101,6 +102,6 @@ Tapped 3559 formulae (3,710 files, 8.8M)
 Already up-to-date.
 ```
 
-Đến đây thì vấn đề đã được giải quyết :). 
+Đến đây thì vấn đề đã được giải quyết :).
 
 

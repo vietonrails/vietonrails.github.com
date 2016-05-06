@@ -1,13 +1,14 @@
 ---
 layout: post
-title: "code theo phong cách Ruby (2)"
+title: "Code theo phong cách Ruby (2)"
 description: ""
 category: Ruby
 tags: [code style, tips]
 comments: true
+author: rockkhuya
 ---
 
-# Khi khai báo 1 số lớn, thêm "_" vào sẽ dễ đọc hơn
+## Khi khai báo 1 số lớn, thêm "_" vào sẽ dễ đọc hơn
 
 ```ruby
 ITEM_LIMIT = 1000000000
@@ -17,7 +18,7 @@ ITEM_LIMIT = 1000000000
 ITEM_LIMIT = 1_000_000_000
 ```
 
-# dùng attr_reader thay cho những method getter đơn giản
+## dùng attr_reader thay cho những method getter đơn giản
 
 ```ruby
 class Person
@@ -48,7 +49,7 @@ end
 <!-- more -->
 
 
-# Trong 1 array mà mỗi phần tử mang 1 ý nghĩa khác nhau, có thể lấy vào nhiều biến cùng lúc
+## Trong 1 array mà mỗi phần tử mang 1 ý nghĩa khác nhau, có thể lấy vào nhiều biến cùng lúc
 
 ```ruby
 ans_array = 14.divmod(3)
@@ -62,7 +63,7 @@ puts "Thương #{quotient}"      # => Thương 4
 puts "Số dư  #{remainder}"     # => Số dư  2
 ```
 
-Tương tự với method `each` của 1 hash. 
+Tương tự với method `each` của 1 hash.
 
 ```ruby
 # key và value được lấy về dưới dạng array
@@ -80,7 +81,7 @@ end
 end
 ```
 
-# Khi nối nhiều array với nhau, không dùng + mà nên dùng *(splat)
+## Khi nối nhiều array với nhau, không dùng + mà nên dùng *(splat)
 
 ```ruby
 numbers = [1, 2, 3]
@@ -98,7 +99,7 @@ Trong trường hợp bạn quên mất dấu `*` thì kết quả sẽ như sau
 [0, numbers, 100] # => [0, [1, 2, 3], 100]
 ```
 
-# Cách viết ||= khi cần "nếu nil thì init"
+## Cách viết ||= khi cần "nếu nil thì init"
 
 ```ruby
 def twitter_client
@@ -109,18 +110,18 @@ end
 
 ```ruby
 def twitter_client
-  @twitter_client ||= Twitter::REST::Client.new 
+  @twitter_client ||= Twitter::REST::Client.new
 end
 ```
 
-# Khi toàn bộ method là đối tượng của rescue thì lược bỏ begin/end
+## Khi toàn bộ method là đối tượng của rescue thì lược bỏ begin/end
 
 ```ruby
 def process_user(user)
   begin
     send_to_mail(user)
   rescue
-    # xử lý 
+    # xử lý
   end
 end
 ```
@@ -133,11 +134,11 @@ rescue
 end
 ```
 
-# gọi rescue là StandardError thay vì Exception
-Với những người đã từng học qua Java hay C# thì thường có thói quen sử dụng `Exception` để bắt lỗi ngoại lệ. 
-Tuy nhiên, khi bắt `Exception` trong Ruby cũng đồng nghĩa với việc bắt luôn những lỗi cực kì nguy hiểm như `NoMemoryError`. 
+## gọi rescue là StandardError thay vì Exception
+Với những người đã từng học qua Java hay C# thì thường có thói quen sử dụng `Exception` để bắt lỗi ngoại lệ.
+Tuy nhiên, khi bắt `Exception` trong Ruby cũng đồng nghĩa với việc bắt luôn những lỗi cực kì nguy hiểm như `NoMemoryError`.
 
-`StandardError` là 1 subclass của `Exception` để bắt lỗi thực hiện của code. rescue mặc định là sẽ bắt `StandardError` và các subclass của nó nên có thể bỏ qua khi viết code. 
+`StandardError` là 1 subclass của `Exception` để bắt lỗi thực hiện của code. rescue mặc định là sẽ bắt `StandardError` và các subclass của nó nên có thể bỏ qua khi viết code.
 
 ```ruby
 def process_user(user)
@@ -155,7 +156,7 @@ rescue => ex
 end
 ```
 
-# Khi thao tác với index, nêu dùng -1 thay vì size - 1
+## Khi thao tác với index, nêu dùng -1 thay vì size - 1
 Code khi sử dụng size - 1
 ```ruby
 numbers = [1, 2, 3, 4, 5]
@@ -180,7 +181,7 @@ numbers[1..-2] # => [2, 3, 4]
 name[1..-2] # => "iet on Rail"
 ```
 
-# find: trả lại yếu tố đầu tiên tìm thấy
+## find: trả lại yếu tố đầu tiên tìm thấy
 
 ```ruby
 def find_admin(users)
@@ -197,9 +198,9 @@ def find_admin(users)
 end
 ```
 
-Sử dụng `find_index` nếu muốn trả về index của yếu tố đầu tiên tìm thấy. 
+Sử dụng `find_index` nếu muốn trả về index của yếu tố đầu tiên tìm thấy.
 
-# select: lấy tất cả những yếu tố thoả mãn điều kiện
+## select: lấy tất cả những yếu tố thoả mãn điều kiện
 
 ```ruby
 def find_admins(users)

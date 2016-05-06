@@ -5,11 +5,12 @@ description: ""
 category: Rails
 tags: [try method, blank method, present method, presence method, pluck]
 comments: true
+author: rockkhuya
 ---
 
 Bài viết này giới thiệu về các method hay và tiện dụng trong ruby và rails như `try`, `blank?`, `present?`, pluck, ...
 
-# sử dụng Object#try(:method_name) thay vì kiểm tra nil 
+## Sử dụng Object#try(:method_name) thay vì kiểm tra nil
 
 ```ruby
 if parent.children && parent.children.singleton?
@@ -19,7 +20,7 @@ end
 ```
 
 ```ruby
-# nếu children là nil thì try(:singleton?) cũng trả về nil 
+# nếu children là nil thì try(:singleton?) cũng trả về nil
 # nếu children không nil thì children.singleton? được gọi như bình thường
 if parent.children.try(:singleton?)
   singleton = parent.children.first
@@ -28,7 +29,7 @@ end
 ```
 <!-- more -->
 
-# sử dụng blank?/present?
+## Sử dụng blank?/present?
 
 ```ruby
 # String
@@ -58,7 +59,7 @@ params = { name: "Tom", email: "hoge@hoge.com" }
 params.blank? # => false
 ```
 
-`present?` ngược lại với `blank?`. 
+`present?` ngược lại với `blank?`.
 
 ```ruby
 # String
@@ -68,7 +69,7 @@ name = "Tom"
 name.present? # => true
 ```
 
-### sử dụng presence
+## Sử dụng presence
 
 ```ruby
 if user.name.blank?
@@ -82,14 +83,14 @@ end
 name = user.name.presence || "What's your name?"
 ```
 
-`"".presence` hoặc `[].presence` sẽ trả về `nil`. 
+`"".presence` hoặc `[].presence` sẽ trả về `nil`.
 
 ```ruby
 name = ""
 puts name.presence || "What's your name?" # => What's your name?
 ```
 
-Ngoài ra còn có 1 ví dụ rất thú vị về `presence` như sau. 
+Ngoài ra còn có 1 ví dụ rất thú vị về `presence` như sau.
 
 ```ruby
 # News nếu có ít nhất là 1 news thì gửi mail và tweet
@@ -100,7 +101,7 @@ if good_news.count > 0
 end
 ```
 
-Đoạn mã trên nếu dùng `presence` 
+Đoạn mã trên nếu dùng `presence`
 
 ```ruby
 if good_news = company.good_news.presence
@@ -109,7 +110,7 @@ if good_news = company.good_news.presence
 end
 ```
 
-`company.good_news` trả lại kết quả là 0 thì câu lệnh `company.good_news.presence` sẽ trả về là  `nil`.  Khi đó câu lệnh if sẽ xử lý `false`. 
+`company.good_news` trả lại kết quả là 0 thì câu lệnh `company.good_news.presence` sẽ trả về là  `nil`.  Khi đó câu lệnh if sẽ xử lý `false`.
 
 Tương tự như thế,  khi muốn kiểm tra điều kiện "trong trường hợp string có 1 giá trị nào đó".
 
@@ -127,18 +128,18 @@ if name = blog.user.name.presence
 end
 ```
 
-# khi kiểm tra sự tồn tại của 1 string thì nên dùng blank? thay vì nil?
+## Khi kiểm tra sự tồn tại của 1 string thì nên dùng blank? thay vì nil?
 
-Mệnh đề "string không có giá trị" thường không cần phân biệt `nil` và `""`. 
-Khi sử dụng `nil?` thì lại cho 2 kết quả khác nhau. 
+Mệnh đề "string không có giá trị" thường không cần phân biệt `nil` và `""`.
+Khi sử dụng `nil?` thì lại cho 2 kết quả khác nhau.
 
 ```ruby
 if email.nil?
-  # => nếu email là "" thì vẫn được coi là có nhập dữ liệu và không gọi puts 
+  # => nếu email là "" thì vẫn được coi là có nhập dữ liệu và không gọi puts
   puts "Please input email!"
 end
 ```
-Đó cũng là lý do nên sử dụng `blank?` hơn. 
+Đó cũng là lý do nên sử dụng `blank?` hơn.
 ```ruby
 if email.blank?
   # => Nếu email là "" hoặc " " thì xử lý như chưa nhập dữ liệu và gọi puts
@@ -148,8 +149,8 @@ end
 
 Tương tự như thế, khi `validates` trong Model, nếu không có lý do đặc biệt thì nên sử dụng `allow_blank: true`, không nên sử dụng `allow_nil: true`.
 
-# khi cần filter, nên dùng query thay vì logic
-Ruby cung cấp rất nhiều method hay và đơn giản để thao tác với array, nhưng khi cần thực hiện filter trong model của Rails, thì nên sử dụng query để tốc độ xử lý được nhanh hơn. 
+## Khi cần filter, nên dùng query thay vì logic
+Ruby cung cấp rất nhiều method hay và đơn giản để thao tác với array, nhưng khi cần thực hiện filter trong model của Rails, thì nên sử dụng query để tốc độ xử lý được nhanh hơn.
 
 ```ruby
 def admin_users
@@ -164,9 +165,9 @@ end
 ```
 
 
-# dùng pluck thay vì map
+## Dùng pluck thay vì map
 
-`pluck` là method để lấy 1 column cho trước trong các record, mà không load toàn bộ các record đó. Vì thế mà tốc độ xử lý và RAM cũng hiệu quả hơn. 
+`pluck` là method để lấy 1 column cho trước trong các record, mà không load toàn bộ các record đó. Vì thế mà tốc độ xử lý và RAM cũng hiệu quả hơn.
 
 ```ruby
 def admin_user_ids
@@ -180,15 +181,15 @@ def admin_user_ids
 end
 ```
 
-# về timezone trong Rails
+## Về timezone trong Rails
 
-Trong Rails, có 2 cách để setting timezone, cách 1 là setting trong application.rb, cách 2 là sử dụng timezone dựa theo biến số môi trường TZ. 
-Nếu trong trường hợp setting giữa 2 cách này mâu thuẫn với nhau, sẽ nảy sinh ra những lỗi không thể dự đoán trước. 
-Vì thế, tốt hơn là thống nhất chỉ sử dụng timezone trong application.rb. 
+Trong Rails, có 2 cách để setting timezone, cách 1 là setting trong application.rb, cách 2 là sử dụng timezone dựa theo biến số môi trường TZ.
+Nếu trong trường hợp setting giữa 2 cách này mâu thuẫn với nhau, sẽ nảy sinh ra những lỗi không thể dự đoán trước.
+Vì thế, tốt hơn là thống nhất chỉ sử dụng timezone trong application.rb.
 
 Ví dụ,  không dùng `Date.today` mà dùng `Date.current`, không dùng `Time.now` mà dùng `Time.current` ( hoặc `Time.zone.now` )
 
-# các method thời gian hay
+## Các method thời gian hay
 ```ruby
 Date.current # => Tue, 05 Nov 2013
 
@@ -206,9 +207,9 @@ Date.current # => 2013-11-05
 2.months.since # => 2014-01-05 06:21:40 +0900
 ```
 
-weeks, days, hours, minutes, seconds cũng thế. 
+Weeks, days, hours, minutes, seconds cũng thế.
 
-Ngoài ra còn rất nhiều cách viết khác nhau để lấy giá trị ngày tháng đặc biệt. 
+Ngoài ra còn rất nhiều cách viết khác nhau để lấy giá trị ngày tháng đặc biệt.
 
 ```ruby
 date = Date.current # => 2013-11-05
@@ -244,7 +245,7 @@ date.ago(2.months)   # => 2013-09-05
 date.since(2.months) # => 2014-01-05
 ```
 
-week, year cũng thế. 
+Week, year cũng thế.
 
 ```ruby
 date = Date.current # => 2013-11-05
@@ -269,7 +270,7 @@ date.prev_week(:monday) # => 2013-10-28
 date.next_week(:monday) # => 2013-11-11
 ```
 
-# các method thay đổi string thành số nhiều, số ít, ...
+## Các method thay đổi string thành số nhiều, số ít, ...
 ```ruby
 "my_book".camelize # => "MyBook"
 
@@ -301,7 +302,7 @@ date.next_week(:monday) # => 2013-11-11
 "MyBook".tableize  # => "my_books"
 ```
 
-# squish xoá các space không cần thiết
+## Squish xoá các space không cần thiết
 
 ```ruby
 "    My    \r\n  \t   \n   books       ".squish # => "My books"

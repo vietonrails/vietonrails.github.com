@@ -5,6 +5,7 @@ description: ""
 category: Ruby
 tags: [design pattern, builder]
 comments: true
+author: rockkhuya
 ---
 
 Builder pattern được sử dụng trong những trường hợp sau.
@@ -15,7 +16,7 @@ Builder pattern được sử dụng trong những trường hợp sau.
 * Có những việc phải check khi cần tạo ra object
 ```
 
-# Builder pattern là gì
+## Builder pattern là gì
 
 Builder là 1 design pattern được tạo thành từ 3 thành phần :
 
@@ -25,7 +26,7 @@ Builder là 1 design pattern được tạo thành từ 3 thành phần :
 
 <!-- more -->
 
-# Sample 1
+## Sample 1
 Ví dụ đơn giản như sau : mô phỏng quá trình tạo ra 1 cốc nước đường.
 Phần ConcreteBuilder ở đây sẽ tạo ra class nước đường. Class nước đường sẽ có 2 biến số là nước và đường.
 
@@ -110,7 +111,7 @@ Tổng kết lại sẽ như sau :
 * Director : vai trò nhận yêu cầu và xử lý thông qua builder.
 ```
 
-# Sample 2
+## Sample 2
 
 Ví dụ 1 đã có nước đường thì ví dụ 2 ta sẽ thêm vào nước muối.
 
@@ -130,7 +131,7 @@ class SaltWater
 end
 ```
 
-Tiếp theo ta sẽ sửa lại class nước đường ở trên. Ta cũng sẽ thêm vào 1 class chung là `add_material` để thêm yếu tố đường vào. 
+Tiếp theo ta sẽ sửa lại class nước đường ở trên. Ta cũng sẽ thêm vào 1 class chung là `add_material` để thêm yếu tố đường vào.
 
 ```ruby
 # SugarWater : ConcreteBuilder
@@ -151,7 +152,7 @@ end
 Tiếp theo sẽ là Builder. Builder sẽ có 2 điểm thay đổi sau :
 
 1. Sửa tên class Builder thành WaterWithMaterialBuilder
-2. method thêm thành phần (muối, đường) sẽ đổi tên thành `add_material`
+2. Method thêm thành phần (muối, đường) sẽ đổi tên thành `add_material`
 
 ```ruby
 class WaterWithMaterialBuilder
@@ -192,7 +193,7 @@ class Director
 end
 ```
 
-Giờ ta sẽ xác nhận lại kết quả của đoạn code trên. Đầu tiên là tạo nước đường. kết quả sẽ trả về giống như sample 1. 
+Giờ ta sẽ xác nhận lại kết quả của đoạn code trên. Đầu tiên là tạo nước đường. kết quả sẽ trả về giống như sample 1.
 
 ```ruby
 builder = WaterWithMaterialBuilder.new(SugarWater)
@@ -220,5 +221,5 @@ Tổng kết lại sẽ như sau :
 * Đề bài : Tạo 1 cốc nước với thành phần khác (muối, đường)
 * SugarWater, SaltWater : vai trò ConcreteBuilder, mang method thay đổi thành phần nước, thành phần phụ. ConcreteBuilder có thể có nhiều.
 * WaterWithMaterialBuilder : vai trò Builder, mang interface thêm nước, thêm thành phần phụ, và trả lại kết quả. Builder chỉ có duy nhất.
-* Director : vai trò nhận yêu cầu và xử lý thông qua builder.  Director chỉ có duy nhất. 
+* Director : vai trò nhận yêu cầu và xử lý thông qua builder.  Director chỉ có duy nhất.
 ```
