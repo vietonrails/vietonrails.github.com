@@ -101,14 +101,6 @@ div.codinfox-index-bg>img {
     max-width: 40%;
     height: auto;
 }
-.posts h2{
-    font-size: 0.825rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #ac4142;
-    margin-bottom: 0;
-}
 /* Category List */
 /*.related {
 padding-top: 2rem;
