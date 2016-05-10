@@ -118,6 +118,7 @@ $ source ~/.bashrc
 ### Test
 
 Sử dụng Python và import caffe vào, nếu không vấn đề gì thì quá trình install đã thành công. 
+
 ```bash
 $ python 
 >>> import caffe
