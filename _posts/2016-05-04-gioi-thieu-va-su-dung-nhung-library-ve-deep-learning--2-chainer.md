@@ -5,6 +5,7 @@ description: ""
 category: AI
 tags: [deep learning, chainer]
 comments: true
+author: rockkhuya
 ---
 
 Chainer được công ty Preferred Networks opensource từ tháng 6/2015.
