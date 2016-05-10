@@ -10,6 +10,8 @@ Caffe là 1 library về deep learning được viết bằng C++. Caffe đượ
 
 Ngày open chính thức thì không rõ, nhưng đã xuất hiện trước chainer hay TF. Bạn có thể tìm thấy khá nhiều bài viết thú vị sử dụng caffe. 
 
+<!-- more -->
+
 ## install
 
 Để install được caffe khá vất vả. Cũng phải thông cảm vì caffe được phát triển từ 1 phòng nghiên cứu, thì không thể chuyên nghiệp như Google hay 1 công ty chuyên về AI được :).
