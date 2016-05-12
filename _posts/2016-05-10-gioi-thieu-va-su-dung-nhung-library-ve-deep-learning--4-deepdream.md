@@ -7,9 +7,6 @@ tags: [deep learning, DeepDream]
 comments: true
 author: rockkhuya
 ---
-Giới thiệu và sử dụng những library về Deep Learning : 4. DeepDream
-===
-
 DeepDream là 1 OSS được Google open vào tháng 7/2015 ( trước TensorFlow ). 
 
 > Từ 1 bức ảnh, DeepDream sẽ tìm ra những vật - những hình ảnh mà nó biết, sau đó sẽ tái cấu trúc lại bức ảnh. 
@@ -81,8 +78,8 @@ Sử dụng DeepDream vào 1 vài bức ảnh thì mình có kết quả thế n
 
 Ví dụ ác mộng với nền là những chú chó.
 
-![DeepDream-caferacer-dog](/public/images/DeepDream-caferacer-dog.jpg)
+![DeepDream-caferacer-dog](/public/images/DeepDream-caferacer-dog.jpeg)
 
 Ví dụ với nền là những bông hoa.
 
-![DeepDream-caferacer-flow](/public/images/DeepDream-caferacer-flow.jpg)
+![DeepDream-caferacer-flow](/public/images/DeepDream-caferacer-flow.jpeg)
