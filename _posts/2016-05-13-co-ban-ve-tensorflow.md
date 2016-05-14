@@ -5,6 +5,7 @@ description: ""
 category: AI
 tags: [tensorflow, deeplearning]
 comments: true
+author: rockkhuya
 ---
 ## DeepLearning là gì ? 
 
