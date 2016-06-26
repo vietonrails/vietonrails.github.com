@@ -13,6 +13,8 @@ Trong docker có 1 nguyên tắc là 1 image chỉ chứa 1 container. Đây là
 
 `docker-compose` cũng dùng file YML để định nghĩa, nên việc đọc hiểu là rất đơn giản. 
 
+<!-- more -->
+
 ### Ví dụ
 
 [Bài viết về cách dùng compose để build môi trường cho Rails](https://docs.docker.com/compose/rails/)
@@ -278,3 +280,6 @@ $ docker-compose run web rake db:create
 ## Sử dụng lại docker để start dự án
 
 Để tái sử dụng lại các file docker này, bạn chỉ cần tạo 1 thư mục và lưu lại 4 files ban đầu chúng ta đã config. Sau đó khi start 1 dự án mới thì copy ra và build. 
+
+Các bạn có thể tham khảo repo sau đây để start 1 dự án nhanh chóng và tiện lợi hơn. 
+[VietOnRails-docker-rails](https://github.com/vietonrails/docker-rails)

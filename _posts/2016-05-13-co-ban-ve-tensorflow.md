@@ -26,7 +26,7 @@ Ví dụ 2 : cho tập hợp các điểm trong mặt phẳng. Phân loại tậ
 ![Bài toán phân loại tập hợp](https://qiita-image-store.s3.amazonaws.com/0/63543/5a550314-d14d-a1c0-9d9a-3de7557a04e8.gif)
 
 Đặc điểm của machine learning, deep learning là các thuật toán gần đúng và lặp đi lặp lại để kết quả sau gần đúng với kết quả nhất. 
-
+<!-- more -->
 
 ## Các khái niệm cơ bản
 

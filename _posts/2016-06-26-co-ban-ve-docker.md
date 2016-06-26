@@ -12,6 +12,8 @@ author: rockkhuya
 
 Docker là 1 tools hỗ trợ việc tạo môi trường ảo (container) trên linux đơn giản và nhanh gọn hơn. Cũng vì được chú ý và phát triển rất nhanh nên nhiều thông tin cách đây 1 năm đã trở nên lỗi thời :D. 
 
+<!-- more -->
+
 ## Đặc điểm của Docker
 
 ### Nhanh, nhẹ
