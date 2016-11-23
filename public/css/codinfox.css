@@ -184,13 +184,11 @@ border-top: 1px solid #eee;
 
 html {
     font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-weight: 200;
     background:#fff;
     -webkit-text-size-adjust:100%;
     -ms-text-size-adjust:100%;
     text-rendering:optimizelegibility;
     -moz-osx-font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
