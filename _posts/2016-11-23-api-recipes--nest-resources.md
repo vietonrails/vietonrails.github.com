@@ -11,6 +11,7 @@ author: rockkhuya
 Nest resources là 1 case mà ta sẽ gặp trong hầu hết các dự án. Tuy nhiên, để code sạch đẹp, dễ đọc, dễ hiểu thì không phải ai cũng làm được. 
 
 Recipe này sẽ dùng 1 ví dụ kinh điển để minh hoạ. Mô tả ví dụ như sau : 
+
 - Ta có đối tượng shop có đầy đủ RESTful
 - shop có comment, các comment cũng có đầy đủ RESTful
 
