@@ -20,7 +20,7 @@ Recipe này sẽ dùng 1 ví dụ kinh điển để minh hoạ. Mô tả ví d�
 
 Với mô tả trên, ta sẽ có `routes.rb` như sau : 
 
-```
+```ruby
   resources :shops do
     resources :comments
   end
@@ -28,7 +28,7 @@ Với mô tả trên, ta sẽ có `routes.rb` như sau :
 
 Kiểm tra routes xem thế nào : 
 
-```
+```bash
 rails routes
        Prefix Verb   URI Pattern                            Controller#Action
 shop_comments GET    /shops/:shop_id/comments(.:format)     comments#index
@@ -54,7 +54,7 @@ Vì thế mà không nên lạm dụng, chỉ nên dùng nest resources ở 1 le
 
 Phần model khá đơn giản, chỉ có các relationship giữa các model với nhau mà thôi. 
 
-```
+```ruby
 class Shop < ApplicationRecord
   has_many :comments
 end
@@ -68,7 +68,7 @@ end
 
 Khi tạo 1 resources mới, mình khá thích dùng `rails g scaffold`. `scaffold` sẽ gen ra cho mình gần như đầy đủ tất cả các file liên quan, ngoài ra code của scaffold cũng rất clear.
 
-```
+```ruby
 # app/controllers/shops_controller.rb
 class ShopsController < ApplicationController
   before_action :set_shop, only: [:show, :update, :destroy]
@@ -125,7 +125,7 @@ end
 
 Tiếp theo là controller của `comments`. Controller này được sửa lại khác nhiều so với default của `scaffold`.
 
-```
+```ruby
 class CommentsController < ApplicationController
   before_action :set_shop
   before_action :set_comment, only: [:show, :update, :destroy]
@@ -188,7 +188,7 @@ end
 ### Thêm `before_action :set_shop`
 Như phần trước đã giải thích, tất cả các `comments` đều phải thuộc 1 và chỉ 1 `shop` duy nhất. Do đó trước tất cả các actions của `comment` đều cần xác định `shop` của nó. 
 
-```
+```ruby
     # Use callbacks 
     def set_shop
       @shop = Shop.find(params[:shop_id])
@@ -198,7 +198,7 @@ Như phần trước đã giải thích, tất cả các `comments` đều phả
 ### Sửa lại `set_comment`
 Tương tự như lý do trên, ta sẽ sửa lại phần `set_comment`.
 
-```
+```ruby
     def set_comment
       # before : @comment = Comment.find(params[:id])
       @comment = @shop.comments.find(params[:id])
@@ -207,7 +207,7 @@ Tương tự như lý do trên, ta sẽ sửa lại phần `set_comment`.
 
 Ngoài ra còn 1 số chỗ sửa nhỏ nhỏ khác : 
 
-```
+```ruby
     # @comments = Comment.all
     @comments = @shop.comments
 
@@ -219,7 +219,7 @@ Ngoài ra còn 1 số chỗ sửa nhỏ nhỏ khác :
 
 Serializer thì không có gì phức tạp. 
 
-```
+```ruby
 class ShopSerializer < ActiveModel::Serializer
   attributes :id, :name
   has_many :comments
