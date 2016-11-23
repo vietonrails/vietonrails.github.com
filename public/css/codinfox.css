@@ -198,7 +198,8 @@ h1, h2, h3, h4, h5, h6 {
 
 code,
 pre {
-    font-family: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 12px;
     overflow: auto;
 }
 
