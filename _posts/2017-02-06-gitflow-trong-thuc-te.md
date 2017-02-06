@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Gitflow trong thực tế"
+title: "GitFlow trong thực tế"
 description: ""
 category: git 
 tags: [gitflow, github-flow, git]
