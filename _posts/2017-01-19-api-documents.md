@@ -7,6 +7,8 @@ tags: [API, documents]
 comments: true
 author: thuckhuya
 ---
+* TOC
+{:toc}
 
 Viết document cho API luôn là phần bị “phân biệt đối xử” theo kiểu : “để cuối cùng làm” hay “làm cho có”. 
 

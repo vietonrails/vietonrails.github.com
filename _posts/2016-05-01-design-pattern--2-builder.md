@@ -7,6 +7,8 @@ tags: [design pattern, builder]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
 
 Builder pattern được sử dụng trong những trường hợp sau.
 

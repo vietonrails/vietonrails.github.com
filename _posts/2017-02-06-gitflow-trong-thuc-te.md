@@ -7,6 +7,8 @@ tags: [gitflow, github-flow, git]
 comments: true
 author: thuckhuya
 ---
+* TOC
+{:toc}
 
 ## Tiền đề
 * Dựa trên mô hình của GitHub Flow. Về mô hình GitHub Flow, có thể xem bản hướng dẫn gốc của GitHub [ở đây](https://guides.github.com/introduction/flow/) .

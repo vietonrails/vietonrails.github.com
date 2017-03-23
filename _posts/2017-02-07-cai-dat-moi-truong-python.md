@@ -6,6 +6,8 @@ category: Python
 tags: [python, anaconda, pyenv]
 comments: true
 ---
+* TOC
+{:toc}
 
 ## Cấu hình
 * Mac osx Sierra 10.12.3

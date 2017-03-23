@@ -7,6 +7,8 @@ tags: [deep learning, chainer]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
 
 Chainer được công ty Preferred Networks opensource từ tháng 6/2015.
 

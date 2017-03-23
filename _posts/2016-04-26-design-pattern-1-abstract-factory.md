@@ -7,6 +7,9 @@ tags: [design pattern, abstract factory]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
+
 Abstract Factory là pattern có nhiệm vụ tạo ra các object và đảm bảo các object này không mâu thuẫn với nhau.
 
 ## Ví dụ và code

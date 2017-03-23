@@ -7,6 +7,9 @@ tags: [tensorflow, deeplearning]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
+
 ## DeepLearning là gì ? 
 
 Bài viết này hướng dẫn và giải thích các method, cấu trúc của TensorFlow. Yêu cầu là bạn cần biết 1 chút về các khái niệm cơ bản về Machine learning, Deep learning. Những khái niệm này mình nghĩ các bạn nên đọc 1 tài liệu chuyên sâu nào thì tốt hơn :D.

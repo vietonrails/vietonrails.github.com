@@ -7,6 +7,9 @@ tags: [API, documents, apipie]
 comments: true
 author: thuckhuya
 ---
+* TOC
+{:toc}
+
 [apipie] [GitHub - Apipie/apipie-rails: Ruby on Rails API documentation tool](https://github.com/Apipie/apipie-rails)
 
 `apipie` là gem hỗ trợ viết document cho RESTful API. Các ưu điểm của gem này là : 

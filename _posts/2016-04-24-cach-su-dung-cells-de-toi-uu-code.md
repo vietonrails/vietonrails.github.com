@@ -7,6 +7,9 @@ tags: [ cells, tối ưu code ]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
+
 ## Cells là gì
 
 Khi làm việc với view của Rails, không ngày nào mà không sử dụng tới method partial. Tuy nhiên, partial chỉ là 1 tính năng để gộp và tái sử dụng code view nhiều lần mà thôi. Khi muốn gộp chung cả logic vào để tạo ra template thì vấn đề sẽ rất phức tạp.

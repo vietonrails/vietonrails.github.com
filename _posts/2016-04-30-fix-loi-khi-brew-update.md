@@ -7,6 +7,8 @@ tags: [brew update]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
 
 Đang định cài Hugo về chơi mà update brew thì gặp tình trạng này :
 
