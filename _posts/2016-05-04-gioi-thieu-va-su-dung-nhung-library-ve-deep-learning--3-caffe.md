@@ -7,6 +7,9 @@ tags: [deep learning, caffe]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
+
 Caffe là 1 library về deep learning được viết bằng C++. Caffe được phát triển nhờ vào phòng nghiên cứu BVLC thuộc đại học California, có thể sử dụng cho cả C++, Python hay MATLAB. 
 
 Ngày open chính thức thì không rõ, nhưng đã xuất hiện trước chainer hay TF. Bạn có thể tìm thấy khá nhiều bài viết thú vị sử dụng caffe. 

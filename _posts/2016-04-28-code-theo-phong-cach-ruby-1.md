@@ -9,6 +9,8 @@ author: rockkhuya
 ---
 Bài viết này liệt kê những cách viết code theo phong cách Ruby, ngắn gọn và dễ nhìn hơn.
 
+* TOC
+{:toc}
 
 ## Đặt if ở phía sau để rút gọn
 

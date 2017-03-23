@@ -7,6 +7,9 @@ tags: [deep learning, DeepDream]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
+
 DeepDream là 1 OSS được Google open vào tháng 7/2015 ( trước TensorFlow ). 
 
 > Từ 1 bức ảnh, DeepDream sẽ tìm ra những vật - những hình ảnh mà nó biết, sau đó sẽ tái cấu trúc lại bức ảnh. 

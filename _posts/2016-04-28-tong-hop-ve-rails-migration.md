@@ -7,6 +7,8 @@ tags: [migration]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
 
 Khi cần thay đổi DB schema trong Rails, cách làm thông thường nhất là sử dụng command `rails generate migration`, nhưng có lẽ hầu hết mọi người vẫn chưa phát huy hết sự tiện lợi của command này. Bài viết này sẽ tổng hợp cách sử dụng command này.
 

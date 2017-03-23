@@ -7,6 +7,8 @@ tags: [try method, blank method, present method, presence method, pluck]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
 
 Bài viết này giới thiệu về các method hay và tiện dụng trong ruby và rails như `try`, `blank?`, `present?`, pluck, ...
 

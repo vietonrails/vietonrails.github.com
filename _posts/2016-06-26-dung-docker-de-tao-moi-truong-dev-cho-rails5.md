@@ -7,6 +7,8 @@ tags: [docker, rails5]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
 
 ## Docker compose
 Trong docker có 1 nguyên tắc là 1 image chỉ chứa 1 container. Đây là cách để thao tác đơn giản và dễ dàng lắp ghép với nhau hơn. Tuy nhiên, nếu yêu cầu 1 hệ thống gồm nhiều containers phức tạp và liên kết chặt chẽ với nhau vê thứ tự, config, ... thì docker là không đủ. Và thế là chúng ta có anh chàng `docker-compose`. 

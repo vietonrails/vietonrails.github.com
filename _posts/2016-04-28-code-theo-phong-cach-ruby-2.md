@@ -7,6 +7,8 @@ tags: [code style, tips]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
 
 ## Khi khai báo 1 số lớn, thêm "_" vào sẽ dễ đọc hơn
 

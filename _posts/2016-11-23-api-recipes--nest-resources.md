@@ -7,6 +7,8 @@ tags: [API, serializer, nest]
 comments: true
 author: rockkhuya
 ---
+* TOC
+{:toc}
 
 Nest resources là 1 case mà ta sẽ gặp trong hầu hết các dự án. Tuy nhiên, để code sạch đẹp, dễ đọc, dễ hiểu thì không phải ai cũng làm được. 
 
