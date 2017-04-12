@@ -35,6 +35,7 @@ Tên `TOMOSIA` là cách chơi chữ tiếng Nhật, có nghĩa là win-win, be 
 Ở TOMOSIA, bạn cứ làm những gì mình thích, nhưng bạn phải là người giỏi nhất về lĩnh vực đó. 
 
 ## Contact
-Homepage: vietonrails.com
+
+Homepage: [Viet on Rails](vietonrails.com)
 Email:    rock.khuya@gmail.com
 Phone:    0934-898-137
